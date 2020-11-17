@@ -57,5 +57,6 @@ update-composer:
     - cwd: {{ php.lookup.pkgs.local_bin }}
     - env:
       - HOME: {{ salt_user_home }}
+      - COMPOSER_ALLOW_SUPERUSER: 1
     - require:
       - cmd: install-composer
